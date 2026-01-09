@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    padding-top: 90px;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 160px;
+    background: linear-gradient(90deg, #c4002f, #ff5f8a);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 150px;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin-top: 25px;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #d6af03;
+}
+.social{
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+   left: 50%;
+}
+.social a {
+  display: inline-flex;
+  font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: transparent;
+    border: .2rem solid #fcfcfc;
+    border-radius: 50%;
+    font-size: 1.9rem;
+    color: #f9f9fa;
+    margin: 3rem 1rem 1rem 0;
+    transition: .5s ease;
+}
+
+.social a:hover {
+     background: #eaf20a;
+  color: #f60808;
+  box-shadow: 0 0 1rem var(--main-color);
+}
+
+.hamburger {
+    display: none;
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* BANNER */
+.banner img {
+    width: 100%;
+    max-width: 1700px;
+    height: 340px;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+    margin-top: 100px;
+}
+
+/* AÇÕES */
+.acoes {
+    padding: 80px 30px;
+    text-align: center;
+}
+
+.acoes h2{
+  margin-bottom: 20px;
+}
+
+.acoes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.acao {
+    width: 350px;
+    height: 550px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    overflow: hidden;
+    background: #fff;
+    transition: transform 0.3s;
+}
+
+.acao:hover {
+    transform: translateY(-10px);
+}
+
+.acao img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.acao h3 {
+    margin: 15px;
+    color: #c4002f;
+}
+
+.acao p {
+    margin: 0 15px;
+    font-size: 14px;
+}
+
+.acao a {
+    display: block;
+    margin: 15px;
+    color: #ff5f8a;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* CONTATO */
+.contato {
+    padding: 80px 30px;
+    background: #ffe6ec;
+    text-align: center;
+}
+
+.contato form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contato input,
+.contato textarea {
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.contato button {
+    padding: 12px;
+    border: none;
+    background: #c4002f;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+    background: #c4002f;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ANIMAÇÃO SCROLL */
+.reveal {
+    opacity: 0;
+    transform: translateX(-80px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+    .menu, .social {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .menu.active {
+        position: absolute;
+        top: 90px;
+        left: 0;
+        width: 100%;
+        background: #c4002f;
+        display: block;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        padding: 20px;
+    }
+}
