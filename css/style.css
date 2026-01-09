@@ -80,6 +80,30 @@ header {
     cursor: pointer;
 }
 
+
+.reveal {
+    opacity: 0;
+    transform: translateX(-80px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .reveal {
+        transform: translateY(60px);
+    }
+
+    .reveal.active {
+        transform: translateY(0);
+    }
+}
+
+
 /* BANNER */
 .banner img {
     width: 100%;

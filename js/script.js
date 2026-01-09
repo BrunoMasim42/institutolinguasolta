@@ -9,14 +9,16 @@ hamburger.addEventListener('click', () => {
 // INTERSECTION OBSERVER
 const elements = document.querySelectorAll('.reveal');
 
-const observer = new IntersectionObserver(entries => {
+const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('active');
+            observer.unobserve(entry.target); // evita retrigger
         }
     });
 }, {
-    threshold: 0.2
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px"
 });
 
 elements.forEach(el => observer.observe(el));
