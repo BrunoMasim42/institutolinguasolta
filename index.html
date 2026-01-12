@@ -13,10 +13,12 @@
   <link rel="shortcut icon" href="imagens/favicon_io/favicon.ico" type="image/x-icon">
     <title>Instituto Lingua Solta</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/carrosel.css">
     <script src="./js/script.js" defer></script>
 </head>
 <body>
 
+    
 <header>
     <div class="logo">
         <img src="./img/logoPaquena.png" alt="Logo">
@@ -43,8 +45,18 @@
     </div>
 </header>
 
-<section class="banner reveal">
-    <img src="./img/banner04.jpg" alt="Banner">
+<section class="carousel reveal">
+    <button class="nav prev">&#10094;</button>
+
+  <div class="carousel-track">
+    <img src="./img/carrosel/01.jpeg" alt="Foto 1">
+    <img src="./img/carrosel/02.jpeg" alt="Foto 2">
+    <img src="./img/carrosel/03.jpeg" alt="Foto 3">
+    <img src="./img/carrosel/04.jpeg" alt="Foto 4">
+    <img src="./img/carrosel/05.jpeg" alt="Foto 5">
+  </div>
+
+  <button class="nav next">&#10095;</button>
 </section>
 
 <section class="acoes reveal">
@@ -114,5 +126,6 @@
 </footer>
 
 <script src="./js/script.js"></script>
+<script src="./js/carrosel.js"></script>
 </body>
 </html>
